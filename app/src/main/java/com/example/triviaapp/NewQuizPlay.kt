@@ -11,6 +11,7 @@ import android.widget.Button
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.text.HtmlCompat
 import kotlinx.coroutines.NonCancellable.cancel
 import kotlin.random.Random
 
@@ -56,35 +57,36 @@ class NewQuizPlay : AppCompatActivity() {
             var cor = 0
             if(data != null){
 
-                questionTextView.text = data[position].question
+                //HtmlCompat.fromHtml(ans, HtmlCompat.FROM_HTML_MODE_LEGACY).toString()
+                questionTextView.text = HtmlCompat.fromHtml(data[position].question, HtmlCompat.FROM_HTML_MODE_LEGACY)
                 questionNo.text = "${position + 1}."
 
                 val randVal = Random.nextInt(0, 4)
 
                 if(randVal == 1){
                     cor = 1
-                    option1.text = data[position].correct_answer
-                    option2.text = data[position].incorrect_answers[0]
-                    option3.text = data[position].incorrect_answers[1]
-                    option4.text = data[position].incorrect_answers[2]
+                    option1.text = HtmlCompat.fromHtml(data[position].correct_answer, HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option2.text = HtmlCompat.fromHtml(data[position].incorrect_answers[0], HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option3.text = HtmlCompat.fromHtml(data[position].incorrect_answers[1], HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option4.text = HtmlCompat.fromHtml(data[position].incorrect_answers[2], HtmlCompat.FROM_HTML_MODE_LEGACY)
                 }else if(randVal == 2){
                     cor = 2
-                    option2.text = data[position].correct_answer
-                    option1.text = data[position].incorrect_answers[0]
-                    option3.text = data[position].incorrect_answers[1]
-                    option4.text = data[position].incorrect_answers[2]
+                    option2.text = HtmlCompat.fromHtml(data[position].correct_answer, HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option1.text = HtmlCompat.fromHtml(data[position].incorrect_answers[0], HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option3.text = HtmlCompat.fromHtml(data[position].incorrect_answers[1], HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option4.text = HtmlCompat.fromHtml(data[position].incorrect_answers[2], HtmlCompat.FROM_HTML_MODE_LEGACY)
                 }else if(randVal == 3){
                     cor = 3
-                    option3.text = data[position].correct_answer
-                    option2.text = data[position].incorrect_answers[0]
-                    option1.text = data[position].incorrect_answers[1]
-                    option4.text = data[position].incorrect_answers[2]
+                    option3.text = HtmlCompat.fromHtml(data[position].correct_answer, HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option2.text = HtmlCompat.fromHtml(data[position].incorrect_answers[0], HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option1.text = HtmlCompat.fromHtml(data[position].incorrect_answers[1], HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option4.text = HtmlCompat.fromHtml(data[position].incorrect_answers[2], HtmlCompat.FROM_HTML_MODE_LEGACY)
                 }else{
                     cor = 4
-                    option4.text = data[position].correct_answer
-                    option2.text = data[position].incorrect_answers[0]
-                    option3.text = data[position].incorrect_answers[1]
-                    option1.text = data[position].incorrect_answers[2]
+                    option4.text = HtmlCompat.fromHtml(data[position].correct_answer, HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option2.text = HtmlCompat.fromHtml(data[position].incorrect_answers[0], HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option3.text = HtmlCompat.fromHtml(data[position].incorrect_answers[1], HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option1.text = HtmlCompat.fromHtml(data[position].incorrect_answers[2], HtmlCompat.FROM_HTML_MODE_LEGACY)
                 }
             }
 
@@ -191,34 +193,34 @@ class NewQuizPlay : AppCompatActivity() {
             questionNo.text = "${position + 1}."
 
             if(data != null){
-                questionTextView.text = data[position].question
+                questionTextView.text = HtmlCompat.fromHtml(data[position].question, HtmlCompat.FROM_HTML_MODE_LEGACY)
 
                 val randVal = Random.nextInt(0, 4)
 
                 if(randVal == 1){
                     cor = 1
-                    option1.text = data[position].correct_answer
-                    option2.text = data[position].incorrect_answers[0]
-                    option3.text = data[position].incorrect_answers[1]
-                    option4.text = data[position].incorrect_answers[2]
+                    option1.text = HtmlCompat.fromHtml(data[position].correct_answer, HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option2.text = HtmlCompat.fromHtml(data[position].incorrect_answers[0], HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option3.text = HtmlCompat.fromHtml(data[position].incorrect_answers[1], HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option4.text = HtmlCompat.fromHtml(data[position].incorrect_answers[2], HtmlCompat.FROM_HTML_MODE_LEGACY)
                 }else if(randVal == 2){
                     cor = 2
-                    option2.text = data[position].correct_answer
-                    option1.text = data[position].incorrect_answers[0]
-                    option3.text = data[position].incorrect_answers[1]
-                    option4.text = data[position].incorrect_answers[2]
+                    option2.text = HtmlCompat.fromHtml(data[position].correct_answer, HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option1.text = HtmlCompat.fromHtml(data[position].incorrect_answers[0], HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option3.text = HtmlCompat.fromHtml(data[position].incorrect_answers[1], HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option4.text = HtmlCompat.fromHtml(data[position].incorrect_answers[2], HtmlCompat.FROM_HTML_MODE_LEGACY)
                 }else if(randVal == 3){
                     cor = 3
-                    option3.text = data[position].correct_answer
-                    option2.text = data[position].incorrect_answers[0]
-                    option1.text = data[position].incorrect_answers[1]
-                    option4.text = data[position].incorrect_answers[2]
+                    option3.text = HtmlCompat.fromHtml(data[position].correct_answer, HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option2.text = HtmlCompat.fromHtml(data[position].incorrect_answers[0], HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option1.text = HtmlCompat.fromHtml(data[position].incorrect_answers[1], HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option4.text = HtmlCompat.fromHtml(data[position].incorrect_answers[2], HtmlCompat.FROM_HTML_MODE_LEGACY)
                 }else{
                     cor = 4
-                    option4.text = data[position].correct_answer
-                    option2.text = data[position].incorrect_answers[0]
-                    option3.text = data[position].incorrect_answers[1]
-                    option1.text = data[position].incorrect_answers[2]
+                    option4.text = HtmlCompat.fromHtml(data[position].correct_answer, HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option2.text = HtmlCompat.fromHtml(data[position].incorrect_answers[0], HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option3.text = HtmlCompat.fromHtml(data[position].incorrect_answers[1], HtmlCompat.FROM_HTML_MODE_LEGACY)
+                    option1.text = HtmlCompat.fromHtml(data[position].incorrect_answers[2], HtmlCompat.FROM_HTML_MODE_LEGACY)
                 }
 
 
