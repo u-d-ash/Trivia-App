@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">TriviaApp</string>
+    <string name="created_by_u_d_ash">Created by @u_d_ash_</string>
+    <string name="new_game">New Game</string>
+    <string name="previous_games">Previous Games</string>
+    <string name="greeting_string">Good Morning</string>
+    <string name="name_string">Udit Jethva</string>
+    <string name="question_category">Category</string>
+    <string name="number_of_questions">Number of Questions</string>
+    <string name="_5">5</string>
+    <string name="_10">10</string>
+    <string name="_15">15</string>
+    <string name="_20">20</string>
+    <string name="difficulty">Difficulty</string>
+    <string name="easy">Easy</string>
+    <string name="medium">Medium</string>
+    <string name="hard">Hard</string>
+    <string name="question_type">Question Type</string>
+    <string name="multiple_choice">Multiple Choice</string>
+    <string name="true_false">True/False</string>
+    <string name="start">Start</string>
+    <string name="Sports">Sports</string>
+    <string name="Entertainment">Entertainment</string>
+    <string name="GK">General Knowledge</string>
+    <string name="Science">Science</string>
+</resources>

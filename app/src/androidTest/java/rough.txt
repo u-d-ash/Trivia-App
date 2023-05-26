@@ -1,0 +1,32 @@
+val theQuestion = qList[position]
+
+        holder.questionText.text = theQuestion.question
+
+        val rand = Random.nextInt(0, 4)
+
+        if(rand == 1){
+            holder.option1text.text = theQuestion.correct_answer
+            holder.option2text.text = theQuestion.incorrect_answers[0]
+            holder.option3text.text = theQuestion.incorrect_answers[1]
+            holder.option4text.text = theQuestion.incorrect_answers[2]
+
+        }else if(rand == 2){
+            holder.option2text.text = theQuestion.correct_answer
+            holder.option1text.text = theQuestion.incorrect_answers[0]
+            holder.option3text.text = theQuestion.incorrect_answers[1]
+            holder.option4text.text = theQuestion.incorrect_answers[2]
+        }else if(rand == 3){
+            holder.option3text.text = theQuestion.correct_answer
+            holder.option2text.text = theQuestion.incorrect_answers[0]
+            holder.option1text.text = theQuestion.incorrect_answers[1]
+            holder.option4text.text = theQuestion.incorrect_answers[2]
+        }else{
+            holder.option4text.text = theQuestion.correct_answer
+            holder.option2text.text = theQuestion.incorrect_answers[0]
+            holder.option3text.text = theQuestion.incorrect_answers[1]
+            holder.option1text.text = theQuestion.incorrect_answers[2]
+        }
+
+
+
+
